@@ -10,6 +10,7 @@ namespace BabakHakimi\LaravelCommentable;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Support\Facades\Auth;
 use Kalnoy\Nestedset\NodeTrait;
 
 class Comment extends Model
@@ -101,6 +102,29 @@ class Comment extends Model
             return true;
         }
         return false;
+    }
+
+    public function scopeOwner($query)
+    {
+        return $query->where('creator_id', Auth::id());
+    }
+
+    public function scopeRootComments($query)
+    {
+        return $query->whereNull('parent_id');
+    }
+
+    public function scopeApproved($query)
+    {
+        if(Auth::check()){
+            return $query->where(function($q) {
+                $q->where('approved', true)
+                    ->orWhere('creator_id', Auth::id());
+            });
+        }
+        return $query->where('approved', true);
+
+
     }
 
     
