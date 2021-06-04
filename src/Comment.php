@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 /**
- * Laravel Commentable Package by Ali Bayat.
+ * Laravel Commentable Package by Babak Hakimi.
  */
 
-namespace AliBayat\LaravelCommentable;
+namespace BabakHakimi\LaravelCommentable;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -81,11 +81,11 @@ class Comment extends Model
     
 
     /**
-     * activate a comment
+     * approve a comment
      */
-    public function active()
+    public function approve()
     {
-        if ($this->update(['active' => true])) {
+        if ($this->update(['approved' => true])) {
             return true;
         }
         return false;
@@ -93,15 +93,15 @@ class Comment extends Model
     
 
     /**
-     * deactivate a comment
+     * unapprove a comment
      */
-    public function deactive()
+    public function unapprove()
     {
-        if ($this->update(['active' => false])) {
+        if ($this->update(['approved' => false])) {
             return true;
         }
         return false;
-    }    
-    
+    }
+
     
 }

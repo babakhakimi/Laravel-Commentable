@@ -1,12 +1,12 @@
 {
-	"name": "alibayat/laravel-commentable",
+	"name": "babakhakimi/laravel-commentable",
 	"description": "Implementing a Comment system for Laravel's Eloquent models.",
 	"license": "MIT",
 	"keywords": ["Laravel", "Eloquent", "Laravel-Commentable", "Laravel Commentable"],
 	"authors": [
 		{
-		    "name": "Ali Bayat",
-		    "email": "ali.bayat@live.com"
+		    "name": "Babak Hakimi",
+		    "email": "babakhakimimehr@gmail.com"
 		}
 	],
 
@@ -19,7 +19,7 @@
 
 	"autoload": {
 		"psr-4": {
-			"AliBayat\\LaravelCommentable\\": "src/"
+			"BabakHakimi\\LaravelCommentable\\": "src/"
 		}
 	},
 
@@ -33,7 +33,7 @@
 		},
 		"laravel": {
 			"providers": [
-				"AliBayat\\LaravelCommentable\\CommentableServiceProvider"
+				"BabakHakimi\\LaravelCommentable\\CommentableServiceProvider"
 			]
 		}
 	},

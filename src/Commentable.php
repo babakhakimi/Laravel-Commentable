@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 /**
- * Laravel Commentable Package by Ali Bayat.
+ * Laravel Commentable Package by Babak Hakimi.
  */
 
-namespace AliBayat\LaravelCommentable;
+namespace BabakHakimi\LaravelCommentable;
 
 use AliBayat\LaravelCommentable\Comment;
 use Illuminate\Database\Eloquent\Model;
@@ -34,9 +34,9 @@ trait Commentable
     /**
      * @return mixed
      */
-    public function activeComments(): MorphMany
+    public function approveComments(): MorphMany
     {
-        return $this->morphMany($this->commentableModel(), 'commentable')->where('active', true);
+        return $this->morphMany($this->commentableModel(), 'commentable')->where('approved', true);
     }
     
     

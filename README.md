@@ -11,13 +11,13 @@ This Package makes it easy to implement Commenting system for Eloquent's Models.
 
 ## Installation
 
-	composer require alibayat/laravel-commentable
+	composer require babakhakimi/laravel-commentable
 
 #### Publish and Run the migrations
 
 
 ```bash
-php artisan vendor:publish --provider="AliBayat\LaravelCommentable\CommentableServiceProvider"
+php artisan vendor:publish --provider="BabakHakimi\LaravelCommentable\CommentableServiceProvider"
 
 php artisan migrate
 ```
@@ -27,7 +27,7 @@ Laravel Commentable package will be auto-discovered by Laravel. and if not: regi
 ```php
 'providers' => [
 	...
-	\AliBayat\LaravelCommentable\CommentableServiceProvider::class,
+	\BabakHakimi\LaravelCommentable\CommentableServiceProvider::class,
 ],
 ```
 
@@ -40,7 +40,7 @@ Laravel Commentable package will be auto-discovered by Laravel. and if not: regi
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use AliBayat\LaravelCommentable\Commentable;
+use BabakHakimi\LaravelCommentable\Commentable;
 
 class Post extends Model
 {
@@ -54,7 +54,7 @@ class Post extends Model
 ```php
 use App\User;
 use App\Post;
-use AliBayat\LaravelCommentable\Comment;
+use BabakHakimi\LaravelCommentable\Comment;
 
 
 
@@ -240,4 +240,4 @@ thanks to the great [laravel-nestedset](https://github.com/lazychaser/laravel-ne
 
 #### Credits
 
- - Ali Bayat - <ali.bayat@live.com>
+ - Babak Hakimi - <babakhakimimehr@gmail.com>

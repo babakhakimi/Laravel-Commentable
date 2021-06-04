@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Laravel Commentable Package by Ali Bayat.
+ * Laravel Commentable Package by Babak Hakimi.
  */
 
 return [
@@ -14,6 +14,6 @@ return [
     |--------------------------------------------------------------------------
     */
     
-    'model' => \AliBayat\LaravelCommentable\Comment::class,
+    'model' => \BabakHakimi\LaravelCommentable\Comment::class,
 
 ];

@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 /**
- * Laravel Commentable Package by Ali Bayat.
+ * Laravel Commentable Package by Babak Hakimi.
  */
 
-namespace AliBayat\LaravelCommentable;
+namespace BabakHakimi\LaravelCommentable;
 
 use Illuminate\Support\ServiceProvider;
 
